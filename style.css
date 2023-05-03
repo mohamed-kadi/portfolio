@@ -13,7 +13,7 @@ body {
 #header {
     width: 100% ;    /* percentage of the container. in this case div header*/
     height: 100svh ; /* size of the view hight of the whole page */
-    /* background-image: url(./images/backgroundNYC.jpg);  */
+    background-image: url(./images/backgroundHeader.jpg); 
     background-size: cover; /* image covers the entire container. in this case div with id #header */
     background-position: center;
 }
@@ -40,11 +40,49 @@ nav ul li {
 }
 
 nav ul li a {
-    color: black;
+    color: rgb(220, 47, 47);
     text-decoration: none;
     font-family: 'Courier New', Courier, monospace;
     font-size: 23px;
+    position:relative;
 }
-nav ul li a:hover {
-    color:aqua;
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: white;
+   
+    position: absolute;
+    right : 0;
+    left: 0;
+    top : -5px;
+    bottom: -6 px;
+    transition: 0.2s;
+}
+
+nav ul li a:hover::after{
+    width:100%;
+    background-color: blueviolet;
+    
+}
+
+.header-text {
+    margin-top: 10%;
+    font-size: 30px;
+    
+}
+.header-text h1 {
+    margin-top:10px;
+    font-size:60px;
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.header-text p {
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+}
+.header-text h1 span {
+    color :red;
 }
